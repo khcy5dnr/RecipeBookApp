@@ -127,10 +127,7 @@ public class ContentProviderHandler extends ContentProvider{
         switch (uriType) {
             case RECIPES:
                 rowsUpdated =
-                        sqlDB.update(dbHandler.TABLE_OF_RECIPES,
-                                values,
-                                selection,
-                                selectionArgs);
+                        sqlDB.update(dbHandler.TABLE_OF_RECIPES, values, selection, selectionArgs);
                 break;
             case RECIPE_ID:
                 String id = uri.getLastPathSegment();

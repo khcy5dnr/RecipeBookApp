@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#73e3e9"
-    tools:context="com.example.durai23.recipebook.AddRecipe">
+    tools:context="com.example.durai23.recipebook.ViewRecipe">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,20 +43,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ADD RECIPE"
+                android:text="UPDATE"
                 android:background="@drawable/round_button"
                 android:textColor="#ffffff"
-                android:onClick="addRecipe"/>
+                android:onClick="updateRecipe"/>
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="CLEAR"
+                android:text="DELETE"
                 android:background="@drawable/round_button"
                 android:textColor="#ffffff"
-                android:onClick="clearText"/>
+                android:onClick="deleteRecipe"/>
         </LinearLayout>
 
     </LinearLayout>

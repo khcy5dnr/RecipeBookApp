@@ -17,10 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddRecipe" />
-        <activity android:name=".SearchRecipe"></activity>
+        <activity android:name=".SearchRecipe" />
 
-        <provider android:name="ContentProviderHandler"
-            android:authorities="com.example.durai23.recipebook.ContentProviderHandler"/>
+        <provider
+            android:name=".ContentProviderHandler"
+            android:authorities="com.example.durai23.recipebook.ContentProviderHandler" />
+
+        <activity android:name=".ViewRecipe"></activity>
     </application>
 
 </manifest>
