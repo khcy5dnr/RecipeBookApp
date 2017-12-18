@@ -12,7 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-
+/*This class supports the activity that will be opened to view the saved recipes.
+* The recipe name will be entered into the text box and query will be done instantly.*/
 public class SearchRecipe extends AppCompatActivity {
 
     EditText searchTextBox;
@@ -23,9 +24,11 @@ public class SearchRecipe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_recipe);
 
+        //initialisation
         searchTextBox = (EditText)findViewById(R.id.searchHint);
         listView = (ListView)findViewById(R.id.listViewRecipe);
 
+        //edit text listener
         searchTextBox.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -47,6 +50,7 @@ public class SearchRecipe extends AppCompatActivity {
             }
         });
 
+        //list view listener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

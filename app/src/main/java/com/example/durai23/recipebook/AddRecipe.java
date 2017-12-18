@@ -2,11 +2,14 @@ package com.example.durai23.recipebook;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class AddRecipe extends AppCompatActivity {
+
+    static final String TAG = "RecipeApp";
 
     EditText recipeName;
     EditText recipeInstruction;
@@ -26,6 +29,7 @@ public class AddRecipe extends AppCompatActivity {
         Recipe recipe = new Recipe(recipeName.getText().toString(), recipeInstruction.getText().toString());
         dbHandler.addRecipe(recipe);//adds to database
         Toast.makeText(this,"Recipe added.",Toast.LENGTH_SHORT).show();
+        Log.i(TAG,"Recipe added.");
         finish();
     }
 

@@ -9,21 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddRecipe" />
-        <activity android:name=".SearchRecipe" />
+        <activity android:name=".AddRecipe"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SearchRecipe"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name=".ContentProviderHandler"
             android:authorities="com.example.durai23.recipebook.ContentProviderHandler" />
 
-        <activity android:name=".ViewRecipe"></activity>
+        <activity android:name=".ViewRecipe"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
